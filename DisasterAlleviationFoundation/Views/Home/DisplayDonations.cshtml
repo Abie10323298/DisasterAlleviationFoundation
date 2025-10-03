@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "View Donations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string[] TableHeaders = new string[] {"Donor Name"
+                    ,"Surname"
+                    ,"Amount"
+                    ,"Date"};
+}
+
+<div class="table">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                @{
+                    foreach (var head in TableHeaders)
+                    {
+                        <th>
+                            @head
+                        </th>
+                    }
+                }
+            </tr>
+        </thead>
+
+        <tbody>
+            @{
+                if (Model != null)
+                {
+                    foreach (var Data in Model)
+                    {
+                        <tr>
+                            <td>@Data.firstName</td>
+                            <td>@Data.surname</td>
+                            <td>@Data.amount</td>
+                            <td>@Data.date</td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>

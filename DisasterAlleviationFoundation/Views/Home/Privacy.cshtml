@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Goods Donations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h2>Donations</h2>
+    <form action="@Url.Action("captureGoodsDonations", "Home")" method="post">
+        <input type="text" class="text" name="donorName" placeholder="First Name" autofocus> <br />
+        <input type="text" class="text" name="donorSurname" placeholder="Surname" autofocus> <br />
+        <input type="text" class="text" name="email" placeholder="Email" autofocus> <br />
+        <input type="date" class="text" name="date" placeholder="Date" required="" autofocus> <br />
+        <input type="number" class="text" name="noOfItems" placeholder="Number of items" required="" autofocus> <br />
+        <select id="category" name="category">
+            <option>Clothes</option>
+            <option>Non‐perishable foods</option>
+
+        </select> <br />
+        <input type="text" class="text" name="description" placeholder="Description" required="" autofocus> <br />
+        <button class="btn" type="submit">Donate</button>
+    </form>
+</div>

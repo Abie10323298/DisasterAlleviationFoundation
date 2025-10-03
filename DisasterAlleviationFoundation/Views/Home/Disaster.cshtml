@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Record Disaster";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h2>Capture Disaster</h2>
+    <form action="@Url.Action("captureDisaster", "Home")" method="post">
+        <select id="disasterName" name="disasterName">
+            <option>Flood</option>
+            <option>Earthquake</option>
+            <option>Wildfire</option>
+            <option>Drought</option>
+            <option>Hurricane</option>
+
+        </select> <br />
+        <input type="date" class="text" name="startDate" placeholder="Start Date" required="" autofocus> <br />
+        <input type="date" class="text" name="endDate" placeholder="End Date" required="" autofocus> <br />
+        <input type="text" class="text" name="location" placeholder="Location" autofocus> <br />
+        <input type="text" class="text" name="description" placeholder="Description" autofocus> <br />
+        <select id="aidType" name="aidType">
+            <option>Water provision</option>
+            <option>Food</option>
+            <option>Clothes</option>
+            <option>Shelter</option>
+
+        </select> <br />
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</div>

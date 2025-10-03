@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Allocate Donations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>Allocate Money to Donation</h3>
+    <form action="@Url.Action("getMoneyAllocation", "Home")" method="post">
+
+        <input type="text" class="text" name="allocatedAmount" placeholder="Allocate amount" required="" autofocus> <br />
+
+        <select id="disaster" name="disaster">
+            <option>Flood</option>
+            <option>Earthquake</option>
+            <option>Wildfire</option>
+            <option>Drought</option>
+            <option>Hurricane</option>
+
+        </select> <br />
+        <button class="btn" type="submit">Submit</button>
+    </form>
+    <br /><hr /><br />
+    <h3>Allocate goods to Donation</h3>
+    <form action="@Url.Action("getGoodsAllocation", "Home")" method="post">
+
+        <select id="donation" name="donation">
+            <option>Clothes</option>
+            <option>Non‐perishable foods</option>
+
+        </select> <br />
+        <select id="disaster" name="disaster">
+            <option>Flood</option>
+            <option>Earthquake</option>
+            <option>Wildfire</option>
+            <option>Drought</option>
+            <option>Hurricane</option>
+
+        </select> <br />
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</div>

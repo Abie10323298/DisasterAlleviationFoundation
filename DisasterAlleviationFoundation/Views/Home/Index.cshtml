@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div class="text-center">
+        <h2>Monetary donations</h2>
+        <form action="@Url.Action("captureDonation", "Home")" method="post">
+            <input type="text" class="text" name="donorName" placeholder="First Name" autofocus><br />
+            <input type="text" class="text" name="donorSurname" placeholder="Surname" autofocus><br />
+            <input type="text" class="text" name="email" placeholder="Email" autofocus><br />
+            <input type="number" class="text" name="amount" placeholder="Amount" required="" autofocus><br />
+            <input type="date" class="text" name="date" required="" autofocus><br />
+
+            <button class="btn" type="submit">Donate</button>
+        </form>
+    </div>
+</body>
